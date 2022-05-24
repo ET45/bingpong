@@ -1,6 +1,7 @@
 export default class Ball {
   constructor(ballElem) {
     this.ballElem = ballElem;
+    this.reset;
   }
 
   get x() {
@@ -17,6 +18,11 @@ export default class Ball {
 
   set y(value) {
     this.ballElem.style.setProperty("--y", value);
+  }
+
+  reset() {
+    this.x = 50;
+    this.y = 50;
   }
 
   update(delta) {
