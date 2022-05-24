@@ -23,6 +23,11 @@ export default class Ball {
   reset() {
     this.x = 50;
     this.y = 50;
+    this.direction = { x: 0.75, y: 0.5 };
+    while (true) {
+      const heading = randomNumberBetweem(0, 2 * Math.PI);
+      this.direction = { x: Math.cos(heading), y: Math.sin(heading) };
+    }
   }
 
   update(delta) {
