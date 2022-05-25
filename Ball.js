@@ -23,8 +23,11 @@ export default class Ball {
   reset() {
     this.x = 50;
     this.y = 50;
-    this.direction = { x: 0.75, y: 0.5 };
-    while (this.direction.x <= 0.2 || this.direction >= 0.9) {
+    this.direction = { x: 0 };
+    while (
+      Math.abs(this.direction.x) <= 0.2 ||
+      Math.abs(this.direction.x) >= 0.9
+    ) {
       const heading = randomNumberBetweem(0, 2 * Math.PI);
       this.direction = { x: Math.cos(heading), y: Math.sin(heading) };
     }
