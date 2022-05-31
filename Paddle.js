@@ -1,3 +1,5 @@
 export default class Paddle {
-  constructor(paddleElem) {}
+  constructor(paddleElem) {
+    this.paddleElem = paddleElem;
+  }
 }
