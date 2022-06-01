@@ -19,7 +19,10 @@ function update(time) {
   window.requestAnimationFrame(update);
 }
 
-function isLose() {}
+function isLose() {
+  if (rect.right >= window.innerWidth || rect.left <= 0) {
+  }
+}
 
 document.addEventListener("mousemove", (e) => {
   playerPaddle.position = (e.y / window.innerHeight) * 100;
