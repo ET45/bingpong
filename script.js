@@ -20,7 +20,8 @@ function update(time) {
 }
 
 function isLose() {
-  if (rect.right >= window.innerWidth || rect.left <= 0) {
+  const rect = ball.rect()
+  return (rect.right >= window.innerWidth || rect.left <= 0) {
   }
 }
 
