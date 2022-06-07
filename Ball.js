@@ -50,9 +50,9 @@ export default class Ball {
       this.direction.y *= -1;
     }
 
-    if (rect.left >= window.innerWidth || rect.left <= 0) {
+    /*  if (rect.left >= window.innerWidth || rect.left <= 0) {
       this.direction.y *= -1;
-    }
+    } */
   }
 }
 function randomNumberBetweem(min, max) {

@@ -12,6 +12,7 @@ function update(time) {
     computerPaddle.update(delta, ball.y);
 
     if (isLose()) {
+      console.log("lose");
     }
   }
 
@@ -20,9 +21,8 @@ function update(time) {
 }
 
 function isLose() {
-  const rect = ball.rect()
-  return (rect.right >= window.innerWidth || rect.left <= 0) {
-  }
+  const rect = ball.rect();
+  return rect.right >= window.innerWidth || rect.left <= 0;
 }
 
 document.addEventListener("mousemove", (e) => {
