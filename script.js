@@ -8,12 +8,10 @@ let lastTime;
 function update(time) {
   if (lastTime != null) {
     const delta = time - lastTime;
-    ball.update(delta);
+    /*   ball.update(delta); */
     computerPaddle.update(delta, ball.y);
 
-    if (isLose()) {
-      console.log("lose");
-    }
+    if (isLose()) handleLose();
   }
 
   lastTime = time;
@@ -23,6 +21,11 @@ function update(time) {
 function isLose() {
   const rect = ball.rect();
   return rect.right >= window.innerWidth || rect.left <= 0;
+}
+
+function handleLose() {
+  ball.reset();
+  computerPaddle.reset();
 }
 
 document.addEventListener("mousemove", (e) => {
