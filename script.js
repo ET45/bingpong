@@ -3,6 +3,7 @@ import Ball from "./Ball";
 const ball = new Ball(document.getElementById("ball"));
 const playerPaddle = new Paddle(document.getElementById("player-paddle"));
 const computerPaddle = new Paddle(document.getElementById("computer-paddle"));
+const playerScoreElem = document.getElementById("player-score");
 
 let lastTime;
 function update(time) {
@@ -24,6 +25,9 @@ function isLose() {
 }
 
 function handleLose() {
+  const rect = ball.rect();
+  if (rect.right >= window.innerWidth) {
+  }
   ball.reset();
   computerPaddle.reset();
 }
